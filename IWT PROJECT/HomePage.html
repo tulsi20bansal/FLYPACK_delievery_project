@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<link rel="shortcut icon" href="Logo2.jpg" type="image/x-icon">
+<title>Flypack courier services</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 0;
+	}
+
+	.navbar {
+		padding-right: 18%;
+		background-color: white;
+		height: 80px;
+		width: 95%;
+		position: fixed;
+		z-index: 5;
+	}
+
+	.navbar a {
+		margin-top: 15px;
+		float: right;
+		margin-right: 25px;
+		font-weight: bold;
+		padding: 8px;
+		color: black;
+		text-decoration: none;
+		font-size: 17px;
+	}
+
+	a.ex1:hover, a.ex1:active {
+		color: red;
+		text-decoration:underline;
+	}
+
+	.moving {
+		height: 30px; 
+		background-color: #feb21a;
+		padding:5px;
+		padding-top: 8px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.marquee {
+		z-index: -2;
+	}
+
+
+	td {
+		width:  250px;
+		background-color: white;
+	}
+
+	#tracker {
+		background-color: black;
+		height: 500px;
+		width: 100%;
+		display: block;
+		box-shadow:2px 2px 4px black;
+	}
+
+	.form {
+		position: absolute;
+		right: 150px;
+		top:350px;
+		border-spacing: 0;
+		border:1px ;  
+	}
+
+	th {
+		height: 35px;
+		font-size: 25px;
+		color:white;
+		background-color:rgb(255,49,49); 
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		padding:8px;
+	}
+
+	.bottom-right {
+		border-bottom-right-radius: 8px;
+	}
+
+	.bottom-left {
+		border-bottom-left-radius: 8px;
+	}
+	
+	td {
+		padding: 15px;
+	}
+
+	.text {
+		padding: 10px;
+	}
+
+	.search {
+		width:100%;
+		height:35px;
+		border: 1.9px solid black ;
+		border-radius: 4px;
+		padding:10px;
+	}
+
+	.submit {
+		height: 35px;
+		width: 105px;
+		font-size: 14px;
+		color:white;
+		background-color:  rgb(255,49,49); 
+		border:none;
+		border-radius:4px;
+	}
+
+	#service-image {
+		position: absolute;
+		right: 120px;
+		bottom: -320px;
+		z-index: -2;
+	}
+
+	#service {
+		height:400px;
+		width: 400px;
+		margin-left: 300px;
+		font-size: 17px;
+		padding: 6px;
+		font-family:Open Sans;
+	}
+
+	.service-head {
+	   font-size: 2.6em;
+	   margin-left: 250px;
+	   font-weight: bold;
+	   font-family: Roboto,sans-serif;
+	}
+
+	.partner-head {
+		font-size: 2.6em;
+		text-align: right;
+		font-weight: bold;
+		font-family: Roboto,sans-serif;
+		margin-right: 450px;
+	}
+
+	#partner {
+	   float: right;
+	   margin-right: 200px;
+	   font-size: 17px;
+	   height: 400px;
+	   width: 400px;
+	   padding: 6px; 
+	   font-family:Open Sans;
+	   
+	}
+
+	#partner-image {
+		position: absolute;
+		left: 230px;
+		top: 1160px;
+		z-index: -2;
+	}
+
+	.s1,.s2,.s3,.s4 {
+	   height:100px;
+	   width: 200px;
+	}
+
+	.s1 {
+	   position: absolute;
+	   margin-left: 340px;
+		
+	}
+
+	
+	.s2 {
+		position :absolute;
+		right:340px;
+	}
+	
+	.s3 {
+		position:absolute;
+		bottom:-1100px;
+		margin-left: 340px;	
+	}
+	
+	.s4 {
+		position:absolute;
+		bottom:-1100px;
+		right:340px;
+	}
+
+	span {
+	   font-size: 22px;
+	   font-weight: bold;
+	   color: rgb(197,57,43)
+	}
+
+	#team {
+	   background-color: black;
+	   margin-top:260px; 
+	   color:white;
+	   height:400px;
+	}
+
+	.members {
+	   margin-left:650px;
+	   padding-top:35px;
+	   font-size:30px;
+	   text-decoration:underline;
+	   font-weight: bold;
+	}
+
+	.fa {
+		float: right;
+		padding: 16px;
+		margin-top: 6px;
+		margin-right:3%;
+		color: black;
+		text-decoration:none;
+		box-sizing: border-box;
+	}
+
+	.copyright {
+	   font-size: 14px;
+	   font-weight:bold;
+	   margin-left: 500px;
+	   margin-top: 35px;
+	   position: absolute;
+	}
+	
+	.social {
+	   margin-left: 1200px;
+	}
+
+
+</style>
+
+<script>
+	function but1(){
+		var ser = document.getElementById('search').value;
+		if(ser=="")
+			alert("Tracking Id is mandatory");
+		else if(!ser.match(/^\d+/))
+			alert("Invalid ID");
+		else if(ser<=9999999||ser>99999999)
+			alert("Invalid ID");
+		else
+			alert("Your package is ready for shipping");
+	}
+
+</script>
+
+</head>
+
+
+<body>
+
+<!-- Navigation Bar -->
+
+<div class="navbar">
+	<img class="logo-img" src="fly.png" width="300px" height="80px" style="margin-left:100px;">
+	<a class="ex1"href="Feedback.htm">Feedback</a>
+	<a class="ex1" href="ContactUs.html">Contact</a> 
+	<a class="ex1"href="#oteam">Team</a> 
+	<a class="ex1"href="#par">Partners</a> 
+	<a class="ex1"href="#ser">Services</a>
+	<a class="ex1"href="AboutUs.html">About Us</a>
+
+</div>
+
+<!--  end navigation bar  -->
+
+<!--  marquee  -->
+
+<br><br><br><br>
+<div class="moving">
+	<marquee class="marquee" width="100%" scrollamount="8">
+	• Dear Customer, our services in parts of Maharashtra, Tripura, Madhya Pradesh, Odisha, West Bengal, Chhattisgarh, Sikkim, Meghalaya,
+	 Assam, Manipur and Udhampur are likely to be impacted due to the lockdown imposed by local government authorities. Further,
+	 leading to delayed pickups and deliveries across the region. Regret this inconvenience.&nbsp; &nbsp; &nbsp; &nbsp; <br><br>
+	</marquee>
+</div>
+
+<!--  end marquee  -->
+
+<!--  Tracker  -->
+
+<section>
+	<div id="tracker">
+		<img class="logo" src="Logo3.jpg" width="600px" height="500px">
+		<table class="form">
+			<tr>
+			<th colspan="2">Track Order</th>
+			</tr>
+			<tr>
+				<td class="bottom-left">  <input type="search" placeholder="Tracking ID" class="search" id="search" size="8">  </td>
+				<td class="bottom-right" align="center">  <button class="submit" onclick="but1()"> TRACK </button></td>
+			</tr>
+		</table>
+	</div>
+</section>
+
+<!--  end Tracker  -->
+
+<!-- About us  -->
+
+<section id="ser">
+<br><br><br><br>
+	<nav class=" service-head">SERVICES</nav>
+	<img src="service.gif" height="400px" width="400px" id="service-image">
+	<p id="service">
+	FlyPack’s aim is to build the operating system for commerce in India. We provide parcel transportation, warehousing, 
+	freight, reverse logistics, cross-border and technology services to over 10000 customers including all of India’s largest 
+	e-commerce companies and leading enterprises. Our supply chain platform and logistics operations bring flexibility, breadth, 
+	efficiency and innovation to our customers’ supply chain and logistics operations. Our operations, infrastructure and 
+	technology enable our customers to transact with us and our partners at the lowest costs.
+	</p>
+</section>
+
+<!--  end About us  -->
+
+<!-- Partner  -->
+<section id="par">  
+<br><br><br><br>
+	<nav class="partner-head">PARTNER</nav>
+	<img src="partner.gif" height="400px" width="400px" id="partner-image">
+	<p id="partner">
+	 As part of our vision we also aim to enable businesses and individuals across India with tools to participate in 
+	 the huge digital supply chain opportunity of the future. Over 11000 businesses have already partnered with FlyPack 
+	 and have access to our infrastructure and technology, in order to extend the FlyPack fulfilment platform through 
+	 their product and operations.
+	</p>
+</section>
+
+<!-- end Partner  -->
+
+<!-- our team  -->
+<section id="oteam">
+<div id="team">
+ <p class="members">OUR TEAM</p><br>
+    <div class="s1"><span>T</span>ulsi <span>B</span>ansal<br>&nbsp;2110991457</div>
+    <div class="s2"><span>T</span>anvi <span>B</span>ansal<br>&nbsp;2110991441</div>
+    <div class="s3"><span>V</span>rinda <span>B</span>ansal<br>&nbsp;2110991561</div>
+    <div class="s4"><span>T</span>amanna <span></span><br>&nbsp;&nbsp;2110991425</div>
+</div>
+</section>
+<!-- end our team  -->
+
+<div style="background-color:rgb(197,57,43);">
+	<div class="copyright">© Copyright - @FlyPack20</div>
+	<div class="social">
+		<a href="#" class="fa fa-twitter fa-2x"></a>
+		<a href="#" class="fa fa-youtube-play fa-2x"></a>
+		<a href="#" class="fa fa-instagram fa-2x"></a>
+		<a href="#" class="fa fa-facebook fa-2x"></a>
+	</div>
+</div>
+
+
+</body>
+</html> 

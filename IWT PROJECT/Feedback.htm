@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="shortcut icon" href="Logo2.jpg" type="image/x-icon">
+<title>Feedback/Complaint</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+	div.head {
+			position: fixed;
+
+			background: rgba(197, 57, 43, 0.9);
+			margin-left: -8px;
+			box-shadow: -5px 5px 20px #000;
+			width: 100%;
+			height: 12%;
+			background-image: url('b.jpeg');
+			
+			
+		}
+		
+	.orderdetails {
+            width: 100%;
+            height: 100vh;
+            font-size: 1.1em;
+            font-weight: bold;
+            align-content: center;
+			font-family: cursive;
+			
+        }
+	
+
+	#orderform {
+				width: 50vw;
+				height: auto;
+
+				padding: 2vh 5vw;
+				border: 1px solid rgb(43, 166, 197);
+				border-radius: 10px;
+				box-shadow: 2px 2px 4px rgba(255,0,0,0.9);
+				margin: 5vh auto;
+				background-image: url('cb.jpg');
+				background-size: cover;
+				
+            
+            
+			}
+
+	.redarea {
+            background-image:url('eee.jpg');
+            height: 11vh;
+            margin-left: -8px;
+            margin-top: -8px;
+            width: 102%;
+            padding-top: 10vh;
+          
+            
+        }
+		
+	.redarea2 {
+            background-image: url('eee.jpg');
+            height: 10vh;
+            margin-left: -8px;
+            margin-bottom: -8px;
+            width: 102%;
+			box-shadow: -5px 5px 20px #000;
+            
+        }
+		
+	ul {
+            float: right;
+            display: flex;
+            list-style: none;
+			
+        }
+
+    ul li {
+            cursor: pointer;
+            margin-top:8%;
+            padding: 10px 20px;
+			vertical-align:bottom;
+        }
+
+    ul li:hover {
+            background: white;
+            border-radius: 50px;
+            transition: all ease-in-out .2s;
+			font-weight:bold;
+			
+        }
+
+    .a active {
+            background: white;
+            border-radius: 50px;
+	}
+
+    .aactive a {
+            color: #c0392b;
+        }
+
+    ul li a {
+
+            color: white;
+            text-decoration: none;
+
+        }
+
+    ul li:hover a {
+            color: black;
+            transition: all ease-in-out .2s;
+        }
+		
+	.textf {
+
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 1vh 0vh;
+            color: rgb(34, 77, 210);
+            margin-top: 2px;
+            font-family: normal;
+            font-size: 18px;
+            outline: none;
+            text-align: left;
+            width: 30vw;
+
+        }
+		
+	.textff {
+
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 1vh 0vh;
+            color: rgb(34, 77, 210);
+            margin-top: 2px;
+            font-family:fantasy;
+            font-size: 18px;
+            outline: none;
+            text-align: left;
+            transition: width .5s;
+            width: 40vw;
+
+        }
+		
+	#heading {
+			 padding:20px;
+			 display:block;
+			 text-align:center;
+			 font-size:200%;
+			 color:white;
+			 text-shadow:3px 3px 5px black;
+			 font-weight:bold;
+		}
+		
+	.submitbtn {
+            padding: 2vh 3vw;
+            background: none;
+            border: 1px solid rgb(197, 57, 34);
+            color: rgb(197, 53, 47);
+            font-size: 15;
+            border-radius: 50px;
+            margin: 3vh auto;
+            font-family: "Segoe UI";
+            width: 15vw;
+            outline: none;
+            font-weight: 300;
+            transition: all ease-in-out .8s;
+            cursor: pointer;
+        }
+
+    .submitbtn:hover {
+            background: rgba(255,0,0,0.9);
+            width: 83%;
+            color: white;
+
+        }
+		
+	.foot {
+			margin-right:3%;
+		}
+		
+	::placeholder{
+			color:grey;
+			font-size:14px;
+		}
+		
+	input[type=radio]:checked + .radio{
+			color:red;
+		}
+		
+	input[type=checkbox]:checked + .check{
+			color:rgb(34, 77, 210);
+		}
+		
+	.fa {
+			float: right;
+			padding: 18px;
+			color: black;
+			text-decoration:none;
+		}
+		
+	.copyright {
+	   font-size: 14px;
+	   font-weight:bold;
+	   margin-left: 500px;
+	   margin-top: 35px;
+	   position: absolute;
+	   font-family: monospace;
+	}
+	
+</style> 
+
+<script type="text/javascript">
+	function but1(){
+	
+			//This is form validation//
+			var a = document.forms["myForm"]["fname"].value;
+            var b = document.forms["myForm"]["dod"].value;
+            var c = document.forms["myForm"]["pnum"].value;
+            var d = document.forms["myForm"]["email"].value;
+            var e = document.forms["myForm"]["onum"].value;
+			var f = document.forms["myForm"]["doo"].value;
+            if (a == "") {
+                alert("You must enter your full name");
+                return false;
+            }
+            else if (c == "") {
+                alert("Please enter your contact number");
+                return false;
+            }
+            else if (d == "") {
+                alert("E-Mail is required");
+                return false;
+            }
+            else if (e == "") {
+                alert("OrderNumber is required to process");
+                return false;
+            }
+			else if(f == ""){
+				alert("Please mention date of your order");
+			}
+			else if (b == "") {
+                alert("Please mention Date of Delivery");
+                return false;
+            }
+			else{
+				document.getElementById("tha").innerHTML= "Thanx for your Feedback :)";
+				return true;
+			}
+	}
+	
+
+</script>
+		
+</head>
+
+<body bgcolor="#fffffb">
+	<div class="head">
+		
+		<img src="Logo2.jpg" height="100%" width="110px" align="left">
+			<ul>
+                <li><a href="HomePage.html">HOME</a></li>
+                <li><a href="AboutUs.html">ABOUT US</a></li>
+                <li><a href="ContactUs.html">CONTACT US </a></li>
+            </ul>
+		
+		<!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTwum_iwZJDIyPMAU_nR_cwDOEcT_cbpg6b3g&usqp=CAU" height="100%" align="right">-->
+		<span id="heading">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;FlyPack Shipping Service</span>
+	</div>
+	
+	<section class="redarea"></section>
+	<br><br><br><br>
+		<section class="orderdetails">
+		<div id="orderform">
+		<center><br><h1>Submit Your Feedback</h1>
+		<span style="text-decoration:underline;color:rgb(197,57,43);"> Feedback form for the shipping service <span></center><br><br><br>
+		<center>
+		<form name="myForm">
+			 
+				Full Name:<br>
+				<input type="text" name="fname" class="textf"><br><br>
+				Contact Number:<br>
+				<input type="tel" name="pnum" class="textf" max="10"><br><br>
+				Email Address:<br>
+				<input type="email" name="email" class="textf" placeholder="e.g.- example@service.com"><br><br>
+				Tracking ID:<br>
+				<input name="onum" title="Check SMS or E-Mail recived" class="textf" placeholder="e.g.- FP12H1122334455"><br><br>
+				Ordered Item:<br>
+				<input type="text" name="oitem" class="textf"><br><br>
+				Date of Order:<br>
+				<input type="date" name="doo" class="textf"><br><br>
+				Date of Delivery:<br>
+				<input type="date" name="dod" class="textf"><br><br><BR><BR></center>
+				How much your are satisfied with your item condition after delivery.<br>
+				<input type="radio" name="marks1"><lable class="radio">3</lable><br>
+				<input type="radio" name="marks1"><lable class="radio">2<br></lable>
+				<input type="radio" name="marks1"><lable class="radio">1<br></lable>
+				<input type="radio" name="marks1"><lable class="radio">0<br><br></lable>
+				How much you are satisfied with our delivery time.<br>
+				<input type="radio" name="marks2"><lable class="radio">3<br></lable>
+				<input type="radio" name="marks2"><lable class="radio">2<br></lable>
+				<input type="radio" name="marks2"><lable class="radio">1<br></lable>
+				<input type="radio" name="marks2"><lable class="radio">0<br><br></lable>
+				How much you are satisfied with packaging of your item.<br>
+				<input type="radio" name="marks3"><lable class="radio">3<br></lable>
+				<input type="radio" name="marks3"><lable class="radio">2<br></lable>
+				<input type="radio" name="marks3"><lable class="radio">1<br></lable>
+				<input type="radio" name="marks3"><lable class="radio">0</lable><br><br><br>
+				<center>
+				Any feedback/complaint for us.<br>
+				<input type="textarea" name="ourrev" class="textff" placeholder="Feedback/Complaint"><br><br><br><br>
+				
+				
+				Choose How To Get Notified For Updates<br><br>
+				<input type="checkbox" name="noti" checked><lable class="check">E-Mail</lable><br>
+				<input type="checkbox" name="noti" checked><lable class="check">SMS</lable><br><br><br>
+				
+				
+		</form>
+		<button class="submitbtn" onclick="but1()"><b>SUBMIT</b></button></center><br><br>
+		<h1 id="tha" align="center" style="color:rgb(30, 240, 55)"> </h1><!--This is for Thanx -->
+		</div>
+		
+			<section class="redarea2">
+			<div class="copyright">Â© Copyright - @FlyPack20</div>
+			<div class="foot">
+				<a href="#" class="fa fa-twitter fa-2x"></a>
+				<a href="#" class="fa fa-youtube-play fa-2x"></a>
+				<a href="#" class="fa fa-instagram fa-2x"></a>
+				<a href="#" class="fa fa-facebook fa-2x"></a>
+			</div>
+			</section>
+		</section>
+		
+		
+</body>
+
+</html>
